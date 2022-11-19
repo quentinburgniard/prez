@@ -1,16 +1,21 @@
 {
-  "name": "id",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview --port 4173"
-  },
   "dependencies": {
-    "reveal.js": "4.x",
-    "vue": "3.x"
+    "axios": "0.x",
+    "cookie-parser": "1.x",
+    "debug": "2.x",
+    "express": "4.x",
+    "http-errors": "1.x",
+    "morgan": "1.x",
+    "pug": "3.x"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "3.x",
-    "vite": "3.x"
+    "nodemon": "2.x",
+    "reveal.js": "4.x"
+  },
+  "main": "index.js",
+  "name": "prez",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon"
   }
 }
