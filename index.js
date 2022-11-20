@@ -36,15 +36,19 @@ app.use((req, res, next) => {
 });
 
 app.get('/:id', (req, res, next) => {
-  axios.get('https://api.digitalleman.com/v2/presentations/' + req.params.id + '?populate=slides', {
+  axios.get('https://api.digitalleman.com/v2/presentations/' + req.params.id, {
     headers: {
       'authorization': `Bearer ${req.token}`
     },
     params: {
-      populate: 'slides'
+      populate: [
+        'slides',
+        'user'
+      ]
     }
   })
   .then((api) => {
+    console.log(api.data.data);
     res.render('App', {
       presentation: api.data.data
     });
