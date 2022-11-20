@@ -1,3 +1,7 @@
 div(class="slides")
+  section
+    h1= presentation.attributes.title
+    h2= presentation.attributes.subtitle
+    = presentation.attributes.user
   each slide in presentation.attributes.slides
     include Slide
